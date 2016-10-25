@@ -1,6 +1,56 @@
 {
   "rules": {
     ".read": "true",
-    ".write": "true"
+    ".write": "true",
+    "modelos_megazord_1000": {
+      "$id_modelo": {
+        ".validate": "newData.hasChildren(['perguntas'])",
+        "perguntas": {
+          ".validate": "newData.hasChildren()",
+          "$id_pergunta": {
+            ".validate": "newData.hasChildren(['atualizado', 'criado', 'conteudo', 'respostas', 'tipo'])",
+            "atualizado": {
+              ".validate": "newData.isString()"
+            },
+            "criado": {
+              ".validate": "newData.isString()"
+            },
+            "conteudo": {
+              ".validate": "newData.isString()"
+            },
+            "respostas": {
+              ".validate": "newData.hasChildren()",
+              "$id_resposta": {
+                ".validate": "newData.hasChildren(['atualizado', 'criado', 'conteudo', 'local'])",
+                "atualizado": {
+                  ".validate": "newData.isString()"
+                },
+                "criado": {
+                  ".validate": "newData.isString()"
+                },
+                "conteudo": {
+                  ".validate": "newData.isString()"
+                },
+                "local": {
+                  ".validate": "newData.isString()"
+                },
+                "$other": {
+                  ".validate": "false"
+                }
+              }
+            },
+            "tipo": {
+              ".validate": "newData.isString()"
+            },
+            "$other": {
+              ".validate": "false"
+            }
+          }
+        },
+        "$other": {
+          ".validate": "false"
+        }
+      }
+    }
   }
 }

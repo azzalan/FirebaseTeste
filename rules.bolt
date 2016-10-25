@@ -1,4 +1,28 @@
-path / {
-  read() { true }
-  write() { true }
+type Modelo {
+    perguntas: Object
 }
+
+type Pergunta {
+    atualizado: String,
+    criado: String,
+    conteudo: String,
+    respostas: Object,
+    tipo: String
+}
+
+type Resposta {
+    atualizado: String,
+    criado: String,
+    conteudo: String,
+    local: String
+}
+
+
+path / {
+    read() { true }
+    write() { true }
+}
+
+/modelos_megazord_1000/{id_modelo} is Modelo;
+/modelos_megazord_1000/{id_modelo}/perguntas/{id_pergunta} is Pergunta;
+/modelos_megazord_1000/{id_modelo}/perguntas/{id_pergunta}/respostas/{id_resposta} is Resposta;
