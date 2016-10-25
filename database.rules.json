@@ -1,6 +1,15 @@
 {
   "rules": {
-    ".read": "auth != null",
-    ".write": "auth != null"
+    ".write": true,
+    "modelos_megazord_1000": {
+      "$id_modelo": {
+        "perguntas": {
+          ".read": true,
+          "$id_pergunta": {
+            ".read": true
+          }
+        }
+      }
+    }
   }
 }
