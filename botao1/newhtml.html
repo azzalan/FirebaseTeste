@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Botão 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+        <script>
+            var config = {
+                apiKey: "AIzaSyC581GYCJNbtFvRu0kRAPCNGKRL3gF7VAc",
+                authDomain: "projetoallan-b74d8.firebaseapp.com",
+                databaseURL: "https://projetoallan-b74d8.firebaseio.com",
+                storageBucket: "projetoallan-b74d8.appspot.com",
+                messagingSenderId: "119257082817"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <script src="app.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script>
+            firebase.auth().signInAnonymously().catch(function (error) {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                //var credential = error.credential;
+                console.log(errorCode);
+                console.log(errorMessage);
+            });
+        </script>
+    </head>
+    <body>
+        <div>Agora em uma área anônima</div>
+        <br><br>
+        <button id="anonima" onclick="location.href = 'index.html';">Ir para área de botões</button>
+    </body>
+</html>

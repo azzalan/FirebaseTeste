@@ -1,18 +1,19 @@
 type Modelo {
     perguntas: Object
+    nome: String
 }
 
 type Pergunta {
-    atualizado: String,
-    criado: String,
+    atualizado: Number,
+    criado: Number,
     conteudo: String,
     respostas: Object,
     tipo: String
 }
 
 type Resposta {
-    atualizado: String,
-    criado: String,
+    atualizado: Number,
+    criado: Number,
     conteudo: String,
     local: String
 }

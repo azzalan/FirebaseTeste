@@ -4,12 +4,21 @@
     <meta charset="utf-8">
     <title>Teste de performance</title>
   </head>
-  <body>
-    <div id="message">
-      <p>Rodando</p>
-    </div>
-  </body>
+    <body>
+        <div>TODO write content</div>
+        <br><br>
+        <button id="botaoGoogle" onclick="firebase.auth().signInWithRedirect(providerGoogle);">Google</button>
+        <br><br>
+        <button id="criarEmailESenha" onclick="criarusuario()">Criar Email e Senha</button>
+        <br><br>
+        <button id="botaoEmailESenha" onclick="logincomemailesenha()">Login com Email e Senha</button>
+        <br><br>
+        <button id="logout" onclick="fazerlogout()">Logout</button>
+        <br><br>
+    </body>
   <script src="https://www.gstatic.com/firebasejs/3.5.1/firebase.js"></script>
-  <script src="js/firebase_init.js"></script>
-  <script src="js/set_questionario.js"></script>
+  <script src="js/firebase_init_as_admin.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
 </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Botão 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+        <script>
+            var config = {
+                apiKey: "AIzaSyC581GYCJNbtFvRu0kRAPCNGKRL3gF7VAc",
+                authDomain: "projetoallan-b74d8.firebaseapp.com",
+                databaseURL: "https://projetoallan-b74d8.firebaseio.com",
+                storageBucket: "projetoallan-b74d8.appspot.com",
+                messagingSenderId: "119257082817"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <script src="app.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <br><br>
+        <button id="botaoGoogle" onclick="firebase.auth().signInWithRedirect(providerGoogle);">Google</button>
+        <br><br>
+        <button id="botaoFacebook" onclick="firebase.auth().signInWithRedirect(providerFacebook);">Facebook</button>
+        <br><br>
+        <button id="criarEmailESenha" onclick="criarusuario()">Criar Email e Senha</button>
+        <br><br>
+        <button id="botaoEmailESenha" onclick="logincomemailesenha()">Login com Email e Senha</button>
+        <br><br>
+        <button id="logout" onclick="fazerlogout()">Logout</button>
+        <br><br>
+        <button id="anonima" onclick="location.href='newhtml.html';">Ir para área anonima</button>
+    </body>
+</html>

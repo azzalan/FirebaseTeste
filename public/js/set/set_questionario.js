@@ -1,13 +1,5 @@
 // Get a reference to the database service
 var database = firebase.database()
-//var sessionsRef = new Firebase('https://projetoteste-f52b5.firebaseapp.com/sessions/')
-
-// database.ref('questionarios').set({})
-// database.ref('users').set({})
-
-// database.ref('modelos_megazord_1000').set({})
-// database.ref('modelos_personalizado_1000').set({})
-// database.ref('modelos_spaghetti_1000').set({})
 
 // setQuestionarios(getQuestionarioKey(), 5)
 // users = database.ref('users')
